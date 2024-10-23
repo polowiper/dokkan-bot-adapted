@@ -1,0 +1,7 @@
+*.db
+*.bat
+saves/
+data/
+config.json
+*.so
+build/
