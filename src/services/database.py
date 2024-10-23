@@ -16,7 +16,11 @@ class DatabaseService:
         res = network.get_client_assets_database()
         dist_db_version = res['version']
 
+<<<<<<< HEAD
         if config.client.gb_db_version == dist_db_version:
+=======
+        if config.client.gb_db_version != dist_db_version:
+>>>>>>> 91195c0 (ayaaa)
             print(Fore.GREEN + Style.BRIGHT + 'Database is already up to date')
             return
 

@@ -35,8 +35,13 @@ GB_ENV = GameEnvironment(
     bundle_id='com.bandainamcogames.dbzdokkanww',
     url='https://ishin-global.aktsk.com',
     port=443,
+<<<<<<< HEAD
     version_code='5.12.0-347d017198077f9178e5b41d7437d9353d8e5162dcbae24764a520d87c289bae',
     db_password=bytearray('9bf9c6ed9d537c399a6c4513e92ab24717e1a488381e3338593abd923fc8a13b'.encode('utf8')),
+=======
+    version_code='5.23.0-eb08f8a58bbdef433e02ac565ae490b0966becf3519dea57a755d440421f5532', 
+    db_password=bytearray('eb08f8a58bbdef433e02ac565ae490b0966becf3519dea57a755d440421f5532'.encode('utf8')),
+>>>>>>> 91195c0 (ayaaa)
     db_path=Path(ROOT_DIR, 'data/gb.db'),
     country='FR',
     currency='EUR'
