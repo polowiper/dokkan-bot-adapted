@@ -117,6 +117,7 @@ def get_gifts():
     return __get('/gifts')
 
 
+<<<<<<< HEAD
 def get_missions():
 <<<<<<< HEAD
     return __get('/missions')
@@ -124,7 +125,13 @@ def get_missions():
     return __get(f'/budokais/55/rankings', params={'per': 1000, 'page': 1})
 
 >>>>>>> 91195c0 (ayaaa)
+=======
+def get_missions(page: int = 1):
+    return __get(f'/budokais/55/rankings', params={'per': 1000, 'page': page})
+>>>>>>> 1a8eff9 (removed the unnecessary things)
 
+def get_budokai_rankings(budokai_id: int, per_page: int = 1000, page: int = 1):
+    return __get(f'/budokais/{budokai_id}/rankings', params={'per': per_page, 'page': page})
 
 def get_awakening_items():
     return __get('/awakening_items')
@@ -146,11 +153,14 @@ def get_dragonball_sets():
     return __get('/dragonball_sets')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 def get_budokai_rankings(budokai_id: int, per_page: int = 1000, page: int = 1):
     return __get(f'/budokais/{budokai_id}', params={'per_page': per_page, 'page': page})
 
 >>>>>>> 91195c0 (ayaaa)
+=======
+>>>>>>> 1a8eff9 (removed the unnecessary things)
 
 def get_dragonball_sets_wishes(set: str):
     return __get('/dragonball_sets/' + set + '/wishes')

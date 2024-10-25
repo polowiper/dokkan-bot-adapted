@@ -5,7 +5,7 @@ from colorama import Fore, Style
 import config
 import network
 from classes.Game import GameAccount
-from commands import gifts, missions, tutorial, help
+from commands import missions, tutorial, help
 from services.account import AccountService
 from services.database import DatabaseService
 
@@ -42,6 +42,6 @@ def run(file_name: str):
         comeback_campaigns=True
     )
     network.post_login_bonuses_accept()
-    gifts.run()
+    #gifts.run()
     missions.run()
     help.run()
