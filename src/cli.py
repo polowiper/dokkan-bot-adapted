@@ -28,12 +28,11 @@ def execute(user_input: str):
 
 
 def run():
-    print(Fore.GREEN + 'Welcome to Dokkan 777')
     CommandService.load()
-    commands.help.run()
+    commands.load.run("polo") #Change this depending on your save name fr I just did that to automate the loading process
 
     while True:
-        user_input = input(Fore.YELLOW + '777 $ ' + Fore.RESET).strip()
+        user_input = input(Fore.MAGENTA + 'WT-Bot v0.1 ~ ' + Fore.RESET).strip()
         execute(user_input)
 
 # OMEGA Command

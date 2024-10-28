@@ -3,8 +3,4 @@ colorama
 pyCryptodome
 PySimpleGUI
 requests
-<<<<<<< HEAD
 peewee
-=======
-peewee
->>>>>>> 91195c0 (ayaaa)

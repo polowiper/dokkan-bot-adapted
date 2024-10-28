@@ -18,5 +18,3 @@ def run():
         args = Fore.YELLOW + ' '.join(map(lambda arg: '<' + arg + '>', specs.args)) + Fore.RESET
         row = name + (' ' + args if len(specs.args) > 0 else '') + ' ' + command.DESCRIPTION
         print(row)
-
-    print('Join our official ' + Fore.MAGENTA + 'Discord' + Fore.RESET + ' server: https://discord.gg/wEAx6r59as')

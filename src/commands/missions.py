@@ -11,15 +11,6 @@ CONTEXT = [GameContext.GAME]
 def run():
     req = network.get_missions()
     mission_list = []
-<<<<<<< HEAD
-    for mission in req['missions']:
-        if mission['completed_at'] is not None and mission['accepted_reward_at'] is None:
-            mission_list.append(mission['id'])
-
-    req = network.post_missions_accept(mission_list)
-    if 'error' not in req:
-        print(Fore.GREEN + Style.BRIGHT + 'Accepted missions')
-=======
     #for mission in req['missions']:
     #    if mission['completed_at'] is not None and mission['accepted_reward_at'] is None:
     #        mission_list.append(mission['id'])
@@ -27,4 +18,3 @@ def run():
     #req = network.post_missions_accept(mission_list)
     #if 'error' not in req:
     #    print(Fore.GREEN + Style.BRIGHT + 'Accepted missions')
->>>>>>> 91195c0 (ayaaa)
