@@ -1,6 +1,3 @@
-import json
-import os
-
 import network
 from config import GameContext
 
