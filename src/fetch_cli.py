@@ -40,7 +40,7 @@ def check_servers(env: GameEnvironment):
 parser = argparse.ArgumentParser(description="Dokkan WT fetch module")
 parser.add_argument("-a", "--account", type=str, required=True, help="Dokkan account that will use for fetches")
 parser.add_argument("-d", "--delay", type=int, default=15, help="Delay between fetches (recommended 5-7)")
-parser.add_argument("-e", "--wt", type=int, default=58, help="WT edition")
+parser.add_argument("-e", "--edition", type=int, default=58, help="WT edition")
 parser.add_argument("-f", "--fetch", type=int, default=1000, help="Amount of players per fetch (minimum 100)")
 parser.add_argument("-p", "--path", type=str, default="fetches", help="Path to the fetches")
 args = parser.parse_args()
@@ -48,7 +48,7 @@ args = parser.parse_args()
 ACCOUNT = args.account
 FETCH_SZ = args.fetch
 DELAY = args.delay
-WT_EDITION = args.wt
+WT_EDITION = args.edition
 SAVE_PATH = args.path
 
 print("Account selected:", ACCOUNT)
@@ -58,15 +58,14 @@ print("WT Edition:", WT_EDITION)
 print("Path:", SAVE_PATH)
 
 if check_servers(config.game_env):
-
-    # Login account (light version)
-    load_fetch.run(ACCOUNT)
-
     # Creates directory if not exists
     if not os.path.exists(SAVE_PATH):
         os.makedirs(SAVE_PATH)
 
     while True:
+        # Login account (light version)
+        load_fetch.run(ACCOUNT)
+
         if os.path.exists(f"{SAVE_PATH}/{LATEST_FETCH-1}.json"):
             ping = wt.run(100, WT_EDITION)
             with open(f"{SAVE_PATH}/{LATEST_FETCH-1}.json", "r") as f:
